@@ -1,0 +1,121 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    min-height: 60vh;
+    flex-direction: column;
+    gap: 30px;
+    background: #7B8FA1;
+}
+
+.input {
+    position: relative;
+    width: 250px;
+}
+
+.input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #434242;
+    background: #7B8FA1;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1em;
+    transition: .5s;
+}
+
+.input span {
+    position: absolute;
+    left: 0;
+    top: 2.5px;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: #434242;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.input input:valid~span,
+.input input:focus~span {
+    color: #CFB997;
+    transform: translateX(10px) translateY(-7px);
+    font-size: .7em;
+    padding: 1px 9px;
+    background: #7B8FA1;
+    border-left: 1px solid #CFB997;
+    border-right: 1px solid #CFB997;
+    letter-spacing: .2em;
+}
+
+.input input:valid,
+.input input:focus {
+    border: 1px solid #CFB997;
+}
+
+input[type="radio"] {
+    appearance: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #999;
+    transition: .3s all linear;
+}
+
+input[type="radio"]:checked {
+    border: 6px solid #CFB997;
+
+}
+
+select {
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    flex: 1;
+    padding: 0 1em;
+    color: #7B8FA1;
+    background-color: #CFB997;
+    cursor: pointer;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 10em;
+    height: 2.5em;
+    border-radius: .25em;
+    overflow: hidden;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #CFB997;
+    transition: .5s all ease;
+    pointer-events: none;
+}
+
+.select:hover::after {
+    color: #f39c12;
+}
+
+
+.btn {
+    width: 100%;
+    text-align: center;
+}
+
+main input[type=submit] {
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #CFB997;
+    color: #7B8FA1;
+    cursor: pointer;
+}
