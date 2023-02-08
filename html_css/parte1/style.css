@@ -1,6 +1,10 @@
+/* Colocando fonte em toda a página */
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+/* Estilizando a Navbar(Cabeçalho) (todas as páginas do projeto) */
 
 header {
     background-color: #f5c85e;
@@ -38,69 +42,8 @@ nav a:hover {
     color: #EB6440;
 }
 
-.produtos {
-    width: 940px;
-    margin: 0 auto;
-    padding: 50px 0;
-}
+/*Estilizando a Home (página inicial)*/
 
-.produtos li {
-    display: inline-block;
-    text-align: center;
-    width: 30%;
-    vertical-align: top;
-    margin: 0 1.5%;
-    padding: 30px 20px;
-    box-sizing: border-box;
-    border: 2px solid #473C33;
-    border-radius: 15px;
-}
-
-.produtos li:hover {
-    border-color: #f5c85e;
-}
-
-.produtos li:active {
-    border-color: #6D9886;
-}
-
-.produtos li:hover h2 {
-    transition: 2s;
-    font-size: 40px;  
-}
-
-.produtos h2 {
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.produto-descricao {
-    font-size: 18px;
-}
-
-.produtos-preco {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-footer {
-    text-align: center;
-    background: url("img/bg.jpg");
-    padding: 40px 0;
-}
-
-.copyright {
-    color: aliceblue;
-    font-size: 13px;
-    margin-top: 20px;
-}
-
-main {
-    
-}
-
-/*css da página home*/
 .banner {
     width: 100%;
 }
@@ -182,9 +125,112 @@ main {
 
 .imagem-beneficios {
     width: 60%;
+    opacity: 0.7;
+    transition: .4s;
+    box-shadow: 10px 10px 10px black;
+}
+
+.imagem-beneficios:hover {
+    opacity: 1;
 }
 
 .video {
     width: 560px;
     margin: 2em auto;
+}
+
+/* Estilizando a página dos Produtos */
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #473C33;
+    border-radius: 15px;
+}
+
+.produtos li:hover {
+    border-color: #f5c85e;
+}
+
+.produtos li:active {
+    border-color: #6D9886;
+}
+
+.produtos li:hover h2 {
+    transition: 2s;
+    font-size: 40px;  
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+    font-size: 18px;
+}
+
+.produtos-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Estilizando o Footer(rodapé) (todas as páginas do projeto)  */
+
+footer {
+    text-align: center;
+    background: url("img/bg.jpg");
+    padding: 40px 0;
+}
+
+.copyright {
+    color: aliceblue;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* Parte mobile do projeto, responsividade para celular */
+
+@media screen and (max-width: 480px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+        text-align: center;
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
+
+    .produtos {
+        width: auto;
+        padding: 50px;
+    }
+
+    .produtos li {
+        width: 100%;
+    }
+
+    .produtos li:not(:last-child) {
+        margin-bottom: 50px;
+    }
 }
