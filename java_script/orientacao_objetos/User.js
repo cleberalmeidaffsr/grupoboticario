@@ -16,6 +16,13 @@ export default class User {
     return this.#nome
   }
 
+  set nome(novoNome) {
+    if (novoNome === '') {
+      throw new Error('formato não válido')
+    }
+    this.#nome = novoNome
+  }
+
   get email() {
     return this.#email
   }
@@ -32,12 +39,7 @@ export default class User {
     return this.#ativo
   }
 
-  set nome(novoNome) {
-    if (novoNome === '') {
-      throw new Error('formato não válido')
-    }
-    this.#nome = novoNome
-  }
+  
 
   exibirInfos() {
     return `${this.nome}, ${this.email}, ${this.nascimento}, ${this.role}, ${this.ativo}`
